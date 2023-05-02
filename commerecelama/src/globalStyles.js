@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-export const Contain = styled.div`
+export const Container = styled.div`
   z-index: 1;
   width: 100%;
   max-width: 1300px;
