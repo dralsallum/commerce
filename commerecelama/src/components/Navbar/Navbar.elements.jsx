@@ -61,14 +61,15 @@ export const NavMenu = styled.ul`
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: ${({ click }) => (click ? 0 : "-100%")};
+    right: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #101522;
+    background: #000000;
+    border-radius: 10px;
   }
 `;
 
@@ -101,6 +102,7 @@ export const NavLinks = styled(Link)`
     padding: 2rem;
     width: 100%;
     display: table;
+    color: #ffffff;
 
     &:hover {
       color: #4b59f7;
