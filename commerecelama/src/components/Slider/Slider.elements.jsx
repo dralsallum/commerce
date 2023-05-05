@@ -6,6 +6,8 @@ export const SliderContainer = styled(Link)`
   height: 100vh;
   display: flex;
   position: relative;
+  text-decoration: none;
+  overflow: hidden;
 `;
 
 export const Arrow = styled.div`
@@ -24,32 +26,53 @@ export const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
+  z-index: 2;
 `;
 
 export const BannerWrapper = styled.div`
   height: 100%;
+  display: flex;
+  transform: translateX(0vh);
 `;
 
 export const Slide = styled.div`
   display: flex;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  direction: rtl;
+  width: auto;
+  height: 50vh;
 `;
 
 export const ImgContainer = styled.div`
   flex: 1;
   height: 100%;
+  border: 1px solid;
+  border-radius: 20px;
 `;
 
 export const Image = styled.img`
-  height: 80%;
+  height: 100%;
+  border-radius: 20px;
 `;
 export const InfoContainer = styled.div`
   flex: 1;
   padding: 50px;
 `;
 
-export const Title = styled.h1``;
-export const Desc = styled.p``;
-export const Button = styled.button``;
+export const Title = styled.h1`
+  font-size: 50px;
+  color: black;
+`;
+export const Desc = styled.p`
+  margin: 50px 0px;
+  font-size: 20;
+  color: black;
+`;
+export const Button = styled.button`
+  background-color: #79965b;
+  padding: 10px 30px;
+  font-size: 18px;
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+`;
