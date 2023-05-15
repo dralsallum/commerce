@@ -1,76 +1,74 @@
-import React from "react";
+import React, { useState } from "react"; // Add useRef import
 import {
   SliderContainer,
   Arrow,
   BannerWrapper,
   ImgContainer,
-  InfoContainer,
   Image,
-  Desc,
-  Title,
-  Button,
   Slide,
 } from "./Slider.elements";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import Home from "../../assets/Home.webp";
-import { useState } from "react";
+import skin from "../../assets/skin.png";
+import spray from "../../assets/spray.png";
+import bottle from "../../assets/bottle.png";
+import pills from "../../assets/pills.png";
+import envelop from "../../assets/envelop.png";
+import browse from "../../assets/browse.png";
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
+  const totalSlides = 6;
+
   const handleClick = (direction) => {
     if (direction === "left") {
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+      setSlideIndex((prevIndex) => {
+        return prevIndex === 0 ? prevIndex : prevIndex - 1;
+      });
     } else {
-      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+      setSlideIndex((prevIndex) => {
+        return prevIndex === totalSlides - 1 ? prevIndex : prevIndex + 1;
+      });
     }
   };
+
   return (
     <SliderContainer>
-      <Arrow direction="left" onClick={handleClick("left")}>
+      <Arrow direction="left" onClick={() => handleClick("left")}>
         <FaArrowLeft />
       </Arrow>
-      <BannerWrapper>
+      <BannerWrapper slideIndex={slideIndex}>
         <Slide>
           <ImgContainer>
-            <Image src={Home} alt="" />
+            <Image src={pills} alt="" />
           </ImgContainer>
-          <InfoContainer>
-            <Title>اختار الفيتامينات المفضلة عندك</Title>
-            <Desc>
-              هنا بتحصل اهم الطرق للحفاظ على صحتك الشخصية والوصول لكامل
-              امكانياتك الجسمانية
-            </Desc>
-            <Button>اضغط هنا</Button>
-          </InfoContainer>
         </Slide>
         <Slide>
           <ImgContainer>
-            <Image src={Home} alt="" />
+            <Image src={skin} alt="" />
           </ImgContainer>
-          <InfoContainer>
-            <Title>اختار الفيتامينات المفضلة عندك</Title>
-            <Desc>
-              هنا بتحصل اهم الطرق للحفاظ على صحتك الشخصية والوصول لكامل
-              امكانياتك الجسمانية
-            </Desc>
-            <Button>اضغط هنا</Button>
-          </InfoContainer>
         </Slide>
         <Slide>
           <ImgContainer>
-            <Image src={Home} alt="" />
+            <Image src={spray} alt="" />
           </ImgContainer>
-          <InfoContainer>
-            <Title>اختار الفيتامينات المفضلة عندك</Title>
-            <Desc>
-              هنا بتحصل اهم الطرق للحفاظ على صحتك الشخصية والوصول لكامل
-              امكانياتك الجسمانية
-            </Desc>
-            <Button>اضغط هنا</Button>
-          </InfoContainer>
+        </Slide>
+        <Slide>
+          <ImgContainer>
+            <Image src={bottle} alt="" />
+          </ImgContainer>
+        </Slide>
+        <Slide>
+          <ImgContainer>
+            <Image src={envelop} alt="" />
+          </ImgContainer>
+        </Slide>
+        <Slide>
+          <ImgContainer>
+            <Image src={browse} alt="" />
+          </ImgContainer>
         </Slide>
       </BannerWrapper>
-      <Arrow direction="right" onClick={handleClick("right")}>
+      <Arrow direction="right" onClick={() => handleClick("right")}>
         <FaArrowRight />
       </Arrow>
     </SliderContainer>

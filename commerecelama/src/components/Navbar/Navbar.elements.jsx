@@ -5,7 +5,7 @@ import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
   color: Black;
-  background: #ffffff;
+  background-color: #f8f8f8;
   height: 80px;
   display: flex;
   justify-content: center;

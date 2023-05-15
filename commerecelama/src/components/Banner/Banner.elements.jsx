@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const BannerContainer = styled(Link)`
-  height: 30px;
+  height: 40px;
   font-size: 14px;
   background-color: #759159;
   color: #ffffff;

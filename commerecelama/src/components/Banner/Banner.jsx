@@ -3,7 +3,7 @@ import { BannerContainer } from "./Banner.elements";
 
 const Banner = () => {
   return (
-    <BannerContainer>
+    <BannerContainer to="/quiz">
       استخدم الكوز المخصص لك لمعرفت الامنتج المناسب لاحتياجك
     </BannerContainer>
   );

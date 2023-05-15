@@ -6,6 +6,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
     font-family: 'source sans pro', sans-serif;
+    background-color: #f8f8f8;
+    
+
 }
 `;
 
