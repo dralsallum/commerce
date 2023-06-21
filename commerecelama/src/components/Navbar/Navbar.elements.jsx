@@ -82,6 +82,7 @@ export const NavItem = styled.li`
   }
   @media screen and (max-width: 960px) {
     width: 100%;
+    background: #000000;
 
     &:hover {
       border: none;
@@ -98,6 +99,7 @@ export const NavLinks = styled(Link)`
   height: 100%;
 
   @media screen and (max-width: 960px) {
+    background: #000000;
     text-align: center;
     padding: 2rem;
     width: 100%;
@@ -118,6 +120,7 @@ export const NavItemBtn = styled.li`
     align-items: center;
     width: 100%;
     height: 120px;
+    background: #000000;
   }
 `;
 
@@ -131,4 +134,9 @@ height 100%;
 width: 100%;
 border: none;
 outline: none;
+
+    @media screen and (max-width: 960px) {
+    background: #000000;
+    
+    }
 `;

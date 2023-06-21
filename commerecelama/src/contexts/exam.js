@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import questions from "../components/Data";
+import questions from "../components/data";
 import { shuffleAnswers } from "../helpers";
 
 const initialState = {
